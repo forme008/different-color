@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<style>
+    #close {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+        margin-bottom: 3rem;
+    }
+
+    #closed {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+    }
+</style>
+
+
+<body>
+
+    <!-- <div id="close">
+        <button onclick="xx()">x</button>
+    </div> -->
+
+    <!-- <div id="closed">
+        <button onclick="advert()" style="width: 20px;height: 20px;">x</button>
+    </div>
+
+
+    <h2>Good afternon</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore pariatur voluptate a sapiente unde ipsum eum
+        consectetur, nisi maiores magnam quae, ratione quasi laudantium qui molestias facilis! Hic illum est nobis dicta
+        saepe. Maiores, alias nulla officiis accusamus in praesentium temporibus eligendi quia exercitationem quisquam
+        quo totam explicabo dolorum vero blanditiis porro deserunt quas quam voluptatem delectus sed, nihil harum
+        aliquid hic. Beatae autem asperiores animi ab. Recusandae est mollitia corrupti aliquid, dolorem impedit
+        nesciunt cupiditate!</p>
+
+
+
+    <button onclick="startAnim()">start</button>
+    <button>stop</button>
+
+-->
+    <button onclick="but1Func()">green</button>
+    <button onclick="but2Func()">red</button>
+    <button onclick="but3Func()">pink</button>
+
+
+    <div id="close">
+        <button onclick="clickMe()">x</button>
+    </div>
+
+    <button onclick="clickMe()"> click it</button>
+
+    <script src="index.js"></script>
+
+
+    <style>
+        p {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
+        }
+    </style> 
+
+
+
+
+    <p id="demon"></p>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demon").innerHTML = seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demon").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+
+    <section>
+        <h1>Light / Dark Mode</h1>
+        <svg id="darkMode" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="sun"
+                d="M55 27.5C55 42.6878 42.6878 55 27.5 55C12.3122 55 0 42.6878 0 27.5C0 12.3122 12.3122 0 27.5 0C42.6878 0 55 12.3122 55 27.5Z"
+                fill="#FBD301" fill-opacity="0.91" />
+        </svg>
+    </section>
+
+</body>
+
+</html>
